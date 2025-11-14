@@ -1,31 +1,20 @@
 This project demonstrates a complete miniature data engineering workflow using Python, SQLite, and SQL.
 It simulates an e-commerce environment, generates synthetic data, loads it into a database, and performs a multi-table analytical SQL query.
 
-📌 Project Overview
-
+Project Overview
 This project includes:
-
-✔ Synthetic e-commerce data generation
-
-✔ SQLite database creation
-
-✔ Five related tables:
-
+✔Synthetic e-commerce data generation
+✔SQLite database creation
+✔Five related tables:
 customers
-
 products
-
 orders
-
 order_items
-
 reviews
 
-✔ Python scripts to ingest and query the database
-
-✔ An analytical SQL query joining multiple tables
-
-✔ Output displayed through Python (no SQLite CLI required)
+✔Python scripts to ingest and query the database
+✔An analytical SQL query joining multiple tables
+✔Output displayed through Python (no SQLite CLI required)
 
 This satisfies a typical data engineering assignment workflow end-to-end.
 
@@ -39,53 +28,32 @@ ecom_assignment/
 ├── ecommerce.db            # Auto-generated SQLite database
 └── README.md               # Project documentation
 
-🔧 Technologies Used
+Technologies Used
 
 Python 3.x
-
 SQLite
-
 Faker (data generation)
-
 SQL
-
 Cursor IDE
-
 Git / GitHub
 
-⚙️ 1. Generating the Database
-
+1. Generating the Database
 Run:
-
 python setup_ecommerce.py
-
-
 This will:
-
 Create ecommerce.db
-
 Generate synthetic:
-
 customers
-
 products
-
 orders
-
 order_items
-
 reviews
-
 Insert all data into tables
-
 Output:
-
 Database created successfully!
 
-📊 2. SQL Query (top_customers.sql)
-
+2. SQL Query (top_customers.sql)
 This SQL file contains the analytical query that joins five tables:
-
 SELECT 
     c.customer_id,
     c.name AS customer_name,
@@ -101,16 +69,11 @@ GROUP BY c.customer_id, c.name
 ORDER BY total_spent DESC
 LIMIT 5;
 
-
 This query calculates the top customers by total spending.
 
-🏃‍♂️ 3. Running the SQL Query
-
+3. Running the SQL Query
 Run:
-
 python run_query.py
-
-
 Example Output:
 
 === QUERY OUTPUT ===
@@ -120,15 +83,10 @@ Example Output:
 (1, 'Customer_1', 36358.56, 5, 4.0)
 (2, 'Customer_2', 21156.48, 3, 3.8)
 
-🧪 4. Testing the Database
-
+4. Testing the Database
 Run:
-
 python test_db.py
-
-
 Expected:
-
 TABLES:
 [('customers',), ('products',), ('orders',), ('order_items',), ('reviews',)]
 
@@ -139,8 +97,7 @@ orders 30
 order_items 45
 reviews 40
 
-✅ Assignment Requirements Achieved
-
+Assignment Requirements Achieved
 ✔ Data generation
 ✔ Database ingestion
 ✔ Multi-table SQL joins
@@ -149,5 +106,4 @@ reviews 40
 ✔ Uploaded to GitHub
 
 👤 Author
-
 Mohammed Saad
